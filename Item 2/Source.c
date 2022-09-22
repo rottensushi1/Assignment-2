@@ -23,7 +23,7 @@ int main(void)
 
 		scanf_s("%d", &upperLimitInput);												//scan and save upper limit
 
-		if (upperLimitInput <= UPPERLIMIT && lowerLimitInput <= upperLimitInput)			//check if limit is between lower limit & 50
+		if (upperLimitInput <= UPPERLIMIT && lowerLimitInput <= upperLimitInput)		//check if limit is between lower limit & 50
 		{
 			printf("-----------------------------\n");
 			printf("x -- sqrt(x) -- x^2 -- x^3\n");										//print top of table

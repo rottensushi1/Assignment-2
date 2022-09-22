@@ -6,13 +6,15 @@
 
 int main(void)
 {
+    #define LARGERBYELEVEN 11
+
     int numInput;
 
     printf("Please enter an integer and press enter: ");    //prompt user for input
 
     scanf_s("%d", &numInput);                               //scan for and save integer input
 
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i <= LARGERBYELEVEN; i++)
     {
         printf("%d\n", numInput + i);                       //print output values
     }
