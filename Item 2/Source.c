@@ -24,7 +24,7 @@ int main(void)
 		if (upperLimit <= 50 && lowerLimit <= upperLimit)								//check if limit is between lower limit & 50
 		{
 			printf("-----------------------------\n");
-			printf("x -- sqrt(x) -- x^2 -- x^3\n");
+			printf("x -- sqrt(x) -- x^2 -- x^3\n");										//print top of table
 
 			for (int i = lowerLimit; i <= upperLimit; i++)								//caculate and print output with lines for table in between
 			{
