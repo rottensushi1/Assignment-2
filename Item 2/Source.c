@@ -2,10 +2,11 @@
 #include <math.h>
 //Taiyo Suzuki
 //Sept 30, 2022
+//PROG71985 - Assignment 2
 //Item 2: Using a for loop, print a table using ASCII (printable) characters with each line giving an integer, its square root,
 //its square and its cube. Ask the user to enter a lower and upper limit for the table, but limit input to stay between 0 and 50.
 
-//definitions/constants
+//definitions
 #define LOWERLIMIT   0
 #define UPPERLIMIT   50
 
@@ -17,7 +18,7 @@ int main(void)
 
 	scanf_s("%d", &lowerLimitInput);													//scan and save lower limit
 
-	if (LOWERLIMIT <= lowerLimitInput && lowerLimitInput <= UPPERLIMIT)					//check if limit is between 0 & 50
+	if (LOWERLIMIT <= lowerLimitInput && lowerLimitInput <= UPPERLIMIT)					//check if limit is between hard limits (0 & 50)
 	{
 		printf("Please enter upper limit (between %d-50): ", lowerLimitInput);			//prompt user for second input
 
@@ -42,13 +43,13 @@ int main(void)
 		}
 		else
 		{
-			printf("Value out of range. Exit and try again\n");							//values out of range
+			printf("Value out of range. Exit and try again\n");							//tell user when values are out of range
 		}
 
 	}
 	else
 	{
-		printf("Value out of range. Exit and try again\n");								//values out of range
+		printf("Value out of range. Exit and try again\n");								//tell user when values are out of range
 	}
 
 	return 0;
