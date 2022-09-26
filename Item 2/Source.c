@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 //Taiyo Suzuki
 //Sept 30, 2022
 //PROG71985 - Assignment 2
@@ -35,7 +36,6 @@ int main(void)
 				int iSquare = i * i, iCube = pow(i, 3);
 
 				printf("-----------------------------\n");
-
 				printf("%d -- %.3f -- %d -- %d\n", i, iSquareRoot, iSquare, iCube);		//format output
 			}
 
