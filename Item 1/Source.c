@@ -7,7 +7,7 @@
 //up to (and including) a value larger by 11, separating each output value by a newline
 
 //definitions
-#define LARGERBYELEVEN 11
+#define LARGER_BY_ELEVEN 11
 
 int main(void)
 {
@@ -21,7 +21,7 @@ int main(void)
         exit(0);
     }
 
-    for (int i = 0; i <= LARGERBYELEVEN; i++)
+    for (int i = 0; i <= LARGER_BY_ELEVEN; i++)
     {
         printf("%d\n", numInput + i);                                           //print output values
     }
