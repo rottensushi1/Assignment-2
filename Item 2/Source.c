@@ -8,7 +8,7 @@
 //its square and its cube. Ask the user to enter a lower and upper limit for the table, but limit input to stay between 0 and 50.
 
 //definitions
-#define LOWERLIMIT   0
+#define LOWERLIMIT   0																	//hard limits
 #define UPPERLIMIT   50
 
 int main(void)
