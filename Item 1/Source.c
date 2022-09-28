@@ -13,13 +13,17 @@ int main(void)
 {
     int numInput;
 
-    printf("Please enter an integer and press enter: ");    //prompt user for input
+    printf("Please enter an integer and press enter: ");                        //prompt user for input
 
-    scanf_s("%d", &numInput);                               //scan for and save integer input
+    if (scanf_s("%d", &numInput) == 0)											//scan for user input and check if it is an integer, and if it is, save it
+    {
+        printf("\nInput not recognised as an integer, please try again.\n");	//if it is not an integer, exit the program
+        exit(0);
+    }
 
     for (int i = 0; i <= LARGERBYELEVEN; i++)
     {
-        printf("%d\n", numInput + i);                       //print output values
+        printf("%d\n", numInput + i);                                           //print output values
     }
 
     return 0;
