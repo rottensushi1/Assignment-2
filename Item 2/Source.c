@@ -39,7 +39,9 @@ int main(void)
 				printf("%d | %.3f | %d | %d\n", i, iSquareRoot, iSquare, iCube);		//format output
 			}
 
-			printf("--------------------------\n");										//print final line to table
+			printf("--------------------------\n");										//print bottom of table
+			printf("x | sqrt(x) | x^2 | x^3\n");										
+			printf("--------------------------\n");										
 		}
 		else
 		{
