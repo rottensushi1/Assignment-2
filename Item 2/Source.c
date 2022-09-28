@@ -13,7 +13,7 @@
 
 int main(void)
 {
-	int lowerLimitInput = 0, upperLimitInput = 50;										//initial limit values same as constant limits
+	int lowerLimitInput = LOWERLIMIT, upperLimitInput = UPPERLIMIT;						//initial limit values same as constant limits
 
 	printf("Please enter lower limit (between 0-50): ");								//prompt user for first input
 
