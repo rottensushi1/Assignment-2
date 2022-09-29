@@ -20,7 +20,7 @@ int main(void)
 	if (scanf_s("%d", &lowerLimitInput) == 0)											//scan for user input and check if it is an integer, and if it is, save it
 	{
 		printf("\nInput not recognised as an integer, please try again.\n");			//if it is not an integer, exit the program
-		exit(0);
+		exit(1);
 	}
 
 	if (LOWER_LIMIT <= lowerLimitInput && lowerLimitInput <= UPPER_LIMIT)				//check if lower limit is between hard limits (0 & 50)
@@ -30,13 +30,13 @@ int main(void)
 		if (scanf_s("%d", &upperLimitInput) == 0)										//scan for user input and check if it is an integer, and if it is, save it
 		{
 			printf("\nInput not recognised as an integer, please try again.\n");		//if it is not an integer, exit the program
-			exit(0);
+			exit(1);
 		}												
 
 		if (upperLimitInput <= UPPER_LIMIT && lowerLimitInput <= upperLimitInput)		//check if upper limit is between lower limit & 50
 		{
 			printf("------------------------------\n");
-			printf("  x | sqrt(x) |  x^2 |    x^3\n");										//print top of table
+			printf("  x | sqrt(x) |  x^2 |    x^3\n");									//print top of table
 
 			for (int i = lowerLimitInput; i <= upperLimitInput; i++)					//caculate and print output with lines for table in between
 			{
@@ -44,10 +44,10 @@ int main(void)
 				int iSquare = i * i, iCube = pow(i, 3);
 
 				printf("------------------------------\n");
-				printf("%3d | %.5f | %4d | %6d\n", i, iSquareRoot, iSquare, iCube);			//format output
+				printf("%3d | %.5f | %4d | %6d\n", i, iSquareRoot, iSquare, iCube);		//format output
 			}
 
-			printf("------------------------------\n");										//print bottom of table
+			printf("------------------------------\n");									//print bottom of table
 			printf("  x | sqrt(x) |  x^2 |    x^3\n");										
 			printf("------------------------------\n");										
 		}

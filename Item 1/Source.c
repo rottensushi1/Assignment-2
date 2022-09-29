@@ -20,7 +20,7 @@ int main(void)
     if (scanf_s("%d", &numInput) == 0)											//scan for user input and check if it is an integer, and if it is, save it
     {
         printf("\nInput not recognised as an integer, please try again.\n");	//if it is not an integer, exit the program
-        exit(0);
+        exit(1);
     }
 
     for (int i = 0; i <= LARGER_BY_ELEVEN; i++)
