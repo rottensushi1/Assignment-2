@@ -35,21 +35,21 @@ int main(void)
 
 		if (upperLimitInput <= UPPER_LIMIT && lowerLimitInput <= upperLimitInput)		//check if upper limit is between lower limit & 50
 		{
-			printf("--------------------------\n");
-			printf("x | sqrt(x) | x^2 | x^3\n");										//print top of table
+			printf("------------------------------\n");
+			printf("  x | sqrt(x) |  x^2 |    x^3\n");										//print top of table
 
 			for (int i = lowerLimitInput; i <= upperLimitInput; i++)					//caculate and print output with lines for table in between
 			{
 				double iDouble = i, iSquareRoot = sqrt(iDouble);
 				int iSquare = i * i, iCube = pow(i, 3);
 
-				printf("--------------------------\n");
-				printf("%d | %.3f | %d | %d\n", i, iSquareRoot, iSquare, iCube);		//format output
+				printf("------------------------------\n");
+				printf("%3d | %.5f | %4d | %6d\n", i, iSquareRoot, iSquare, iCube);			//format output
 			}
 
-			printf("--------------------------\n");										//print bottom of table
-			printf("x | sqrt(x) | x^2 | x^3\n");										
-			printf("--------------------------\n");										
+			printf("------------------------------\n");										//print bottom of table
+			printf("  x | sqrt(x) |  x^2 |    x^3\n");										
+			printf("------------------------------\n");										
 		}
 		else
 		{
