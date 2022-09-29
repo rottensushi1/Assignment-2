@@ -13,10 +13,10 @@
 
 int main(void)
 {
-	int dayInput = 1;																					//user Input intialized as positive value for while loop to function
+	int dayInput = 1;																					//user input variable intialized as positive value for while loop to function
 	int weeks, daysRemain;
 
-	printf("Enter a number of days. Enter a nonpositive value such as 0 or -1 to end program.\n");		//program use instructions
+	printf("Enter a number of days. Enter a nonpositive value such as 0 or -1 to end program.\n");		//print program instructions
 
 	while (dayInput > 0) 
 	{
