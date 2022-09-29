@@ -13,28 +13,29 @@
 
 int main(void)
 {
-	float userInput = 1;																				//user Input intialized as positive value for while loop to function
+	int dayInput = 1;																					//user Input intialized as positive value for while loop to function
+	int weeks, daysRemain;
 
-	int days, weeks, daysRemain;
+	printf("Enter a number of days. Enter a nonpositive value such as 0 or -1 to end program.\n");		//program use instructions
 
-	printf("Enter a number of days. Enter a nonpositive value such as 0 or -1 to end program.");		//program use instructions
-
-	while (userInput > 0) 
+	while (dayInput > 0) 
 	{
 		printf("\nDays: ");																				//ask for user input
 
-		scanf_s("%f", &userInput);																		//scan and save input
-
-		if (userInput <= 0)																				//break loop if input is nonpositive value
+		if (scanf_s("%d", &dayInput) == 0)																//scan for user input and check if it is an integer, and if it is, save it
+		{
+			printf("\nInput not recognised as an integer, please try again.\n");						//if it is not an integer, exit the program
+			exit(0);
+		}
+		
+		if (dayInput <= 0)																				//break loop if input is nonpositive value
 			break;
 
-		days = userInput;																				//only assign positive values to int (after break point)
+		weeks = dayInput / DAYS_IN_WEEK;																//calculate weeks from days (divide)
 
-		weeks = days / DAYS_IN_WEEK;																	//calculate weeks from days (divide)
+		daysRemain = dayInput % DAYS_IN_WEEK;															//calculate remainder from division (modulus operator %)
 
-		daysRemain = days % DAYS_IN_WEEK;																//calculate remainder from division
-
-		printf("\n%d days are %d weeks, %d days\n", days, weeks, daysRemain);							//print output
+		printf("\n%d days are %d weeks, %d days\n", dayInput, weeks, daysRemain);						//print output
 	}
 
 	return 0;
