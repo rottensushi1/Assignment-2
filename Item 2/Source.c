@@ -8,24 +8,24 @@
 //its square and its cube. Ask the user to enter a lower and upper limit for the table, but limit input to stay between 0 and 50.
 
 //definitions
-#define LOWERLIMIT   0																	//hard limits
-#define UPPERLIMIT   50
+#define LOWER_LIMIT   0																	//hard limits
+#define UPPER_LIMIT   50
 
 int main(void)
 {
-	int lowerLimitInput = LOWERLIMIT, upperLimitInput = UPPERLIMIT;						//initial limit values same as constant limits
+	int lowerLimitInput = LOWER_LIMIT, upperLimitInput = UPPER_LIMIT;					//initial limit values same as constant limits
 
 	printf("Please enter lower limit (between 0-50): ");								//prompt user for first input
 
 	scanf_s("%d", &lowerLimitInput);													//scan and save lower limit
 
-	if (LOWERLIMIT <= lowerLimitInput && lowerLimitInput <= UPPERLIMIT)					//check if limit is between hard limits (0 & 50)
+	if (LOWER_LIMIT <= lowerLimitInput && lowerLimitInput <= UPPER_LIMIT)				//check if limit is between hard limits (0 & 50)
 	{
 		printf("Please enter upper limit (between %d-50): ", lowerLimitInput);			//prompt user for second input
 
 		scanf_s("%d", &upperLimitInput);												//scan and save upper limit
 
-		if (upperLimitInput <= UPPERLIMIT && lowerLimitInput <= upperLimitInput)		//check if limit is between lower limit & 50
+		if (upperLimitInput <= UPPER_LIMIT && lowerLimitInput <= upperLimitInput)		//check if limit is between lower limit & 50
 		{
 			printf("--------------------------\n");
 			printf("x | sqrt(x) | x^2 | x^3\n");										//print top of table
