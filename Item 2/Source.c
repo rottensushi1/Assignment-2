@@ -13,17 +13,17 @@
 
 int main(void)
 {
-	int lowerLimitInput = LOWER_LIMIT, upperLimitInput = UPPER_LIMIT;						//initial limit values same as constant limits
+	int lowerLimitInput = LOWER_LIMIT, upperLimitInput = UPPER_LIMIT;					//initial limit values same as constant limits
 
 	printf("Please enter lower limit (between 0-50): ");								//prompt user for first input
 
 	if (scanf_s("%d", &lowerLimitInput) == 0)											//scan for user input and check if it is an integer, and if it is, save it
 	{
-		printf("Input not recognised as an integer, please try again.\n");				//if it is not an integer, exit the program
+		printf("\nInput not recognised as an integer, please try again.\n");			//if it is not an integer, exit the program
 		exit(0);
 	}
 
-	if (LOWER_LIMIT <= lowerLimitInput && lowerLimitInput <= UPPER_LIMIT)					//check if lower limit is between hard limits (0 & 50)
+	if (LOWER_LIMIT <= lowerLimitInput && lowerLimitInput <= UPPER_LIMIT)				//check if lower limit is between hard limits (0 & 50)
 	{
 		printf("Please enter upper limit (between %d-50): ", lowerLimitInput);			//prompt user for second input
 
@@ -53,12 +53,12 @@ int main(void)
 		}
 		else
 		{
-			printf("Value out of range, please try again.\n");							//tell user when values are out of range (as opposed to input not being an integer when program
+			printf("\nValue out of range, please try again.\n");						//tell user when values are out of range (as opposed to input not being an integer when program
 		}																				//exits without printing a table)
 	}
 	else
 	{
-		printf("Value out of range, please try again.\n");								//tell user when values are out of range
+		printf("\nValue out of range, please try again.\n");							//tell user when values are out of range
 	}
 
 	return 0;
