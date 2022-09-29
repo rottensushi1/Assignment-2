@@ -38,5 +38,6 @@ int main(void)
 		printf("\n%d days are %d weeks, %d days\n", dayInput, weeks, daysRemain);						//print output
 	}
 
+	printf("\Exiting.\n");
 	return 0;
 }
