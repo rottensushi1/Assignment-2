@@ -28,7 +28,7 @@ int main(void)
 			exit(1);
 		}
 
-		if (dayInput <= 0)																				//break loop if input is nonpositive value
+		if (dayInput <= 0)																				//exit program if input is nonpositive value
 		{
 			printf("\nExiting.\n");
 			exit(1);
