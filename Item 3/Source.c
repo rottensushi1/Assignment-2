@@ -18,7 +18,7 @@ int main(void)
 
 	printf("Enter a number of days. Enter a nonpositive value such as 0 or -1 to end program.\n");		//print program instructions
 
-	while (dayInput > 0) 
+	while (dayInput > 0)
 	{
 		printf("\nDays: ");																				//ask for user input
 
@@ -27,9 +27,12 @@ int main(void)
 			printf("\nInput not recognised as an integer, please try again.\n");						//if it is not an integer, exit the program
 			exit(1);
 		}
-		
+
 		if (dayInput <= 0)																				//break loop if input is nonpositive value
-			break;
+		{
+			printf("\nExiting.\n");
+			exit(1);
+		}
 
 		weeks = dayInput / DAYS_IN_WEEK;																//calculate weeks from days (divide)
 
@@ -38,6 +41,6 @@ int main(void)
 		printf("\n%d days are %d weeks, %d days\n", dayInput, weeks, daysRemain);						//print output
 	}
 
-	printf("\Exiting.\n");
+	printf("\nExiting.\n");
 	return 0;
 }
